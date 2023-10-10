@@ -33,7 +33,7 @@ function generatePassword (_length,_selectu,_selectl,_selectn,_selects) {
   var _selectl = confirm ("Do you want to use lower case?")
   var _selectn = confirm ("Do you want to use numbers?")
   var _selects = confirm ("Do you want to use symbols?")
-  if ( number + symbol + upper + lower === 0) {
+  if ( _selectu + _selectl + _selectn + _selects === 0) {
     alert("No box chosen. Please select at least one box!");
     return;
   }
@@ -52,11 +52,11 @@ function lowerCase () {
   return types.numbers[Math.floor(Math.random() * types.numbers.length)];},
  function symbols (){
   return types.symbols[Math.floor(Math.random() * types.symbols.length)]; }
-];
+];}
 function getPassword (){
 
 }
-}
+}}
 // Write password to the #password input
 function writePassword(password) {
   var password = generatePassword(length,selectU,selectL,selectN,selectS);
@@ -71,4 +71,4 @@ function writePassword(password) {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword) {}
+generateBtn.addEventListener("click", writePassword) 
