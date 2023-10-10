@@ -33,8 +33,29 @@ function generatePassword (_length,_selectu,_selectl,_selectn,_selects) {
   var _selectl = confirm ("Do you want to use lower case?")
   var _selectn = confirm ("Do you want to use numbers?")
   var _selects = confirm ("Do you want to use symbols?")
-   
+  if ( number + symbol + upper + lower === 0) {
+    alert("No box chosen. Please select at least one box!");
+    return;
+  }
 
+//or value?
+for (var i = 0; i < _length; i++) {
+ if ((_selectu,_selectl,_selectn,_selects) === true) {
+//https://www.scaler.com/topics/password-generator-javascript/
+
+    const getType = [
+function upperCase() {
+  return types.upperCase[Math.floor(Math.random() * types.upperCase.length)];},
+function lowerCase () {
+  return types.lowerCase[Math.floor(Math.random() * types.lowerCase.length)];},
+ function numbers (){
+  return types.numbers[Math.floor(Math.random() * types.numbers.length)];},
+ function symbols (){
+  return types.symbols[Math.floor(Math.random() * types.symbols.length)]; }
+];
+function getPassword (){
+
+}
 }
 // Write password to the #password input
 function writePassword(password) {
@@ -50,6 +71,4 @@ function writePassword(password) {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);{
-
-}
+generateBtn.addEventListener("click", writePassword) {}
